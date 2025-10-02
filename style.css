@@ -191,4 +191,35 @@ footer {
 
 .social-links a:hover {
     color: var(--accent-color);
+
+}
+
+/* --- Project Card Styling --- */
+.project-card h4 {
+    font-size: 1.5rem;
+    color: var(--accent-color); /* This is the yellow color you want */
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 10px;
+    /* Ensure the h4 inside a link retains its color */
+    text-decoration: none; /* Remove underline if it appears due to parent link */
+}
+
+.project-card p {
+    color: var(--text-color); /* This is the light text color you want */
+    /* Ensure the paragraph inside a link retains its color */
+    text-decoration: none; /* Remove underline if it appears due to parent link */
+}
+
+/* Also ensure the link itself doesn't mess with these styles */
+.project-link {
+    text-decoration: none; /* Removes the default underline from the entire block */
+    color: inherit; /* Makes the link inherit the text color from its parent */
+    display: block; /* Important: makes the entire block clickable */
+    height: 100%; /* Ensures the link covers the whole card for clickability */
+    width: 100%; /* Ensures the link covers the whole card for clickability */
+}
+
+/* When hovering over the entire project link, you might want a subtle visual cue */
+.project-link:hover .project-card h4 {
+    color: var(--secondary-color); /* Changes to pink on hover */
 }
